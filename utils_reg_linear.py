@@ -197,3 +197,18 @@ def metodo_do_gradiente_vetorizado(X, y, w_in, b_in, calcula_custo, calcula_grad
         
     return w, b, J_history # retorna valores finais e históricos
 
+def sigmoid(z):
+    """
+    Calcula o valor sigmoide de z
+
+    Argumento:
+        z (ndarray): Um escalar ou numpy array de qualquer tamanho.
+
+    Retorna:
+        g (ndarray): sigmoid(z), com o mesmo shape de z
+         
+    """
+
+    g = 1/(1+np.exp(-z))
+   
+    return g
